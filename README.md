@@ -15,6 +15,8 @@ So the steps were:
  - Execution of a Exploratory Data Analysis
  - Development and engineering of features
  - Training and Validation of a classification model 
+ 
+A detailed write up can be found at [Music and people — hand in hand for centuries.](https://medium.com/@c.rausch020/music-and-people-hand-in-hand-for-centuries-a253af2378fc)
 
 ___
 ## Files
