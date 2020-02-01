@@ -23,6 +23,7 @@ ___
 
  - [sparkify-nb.ipynb](https://github.com/step4/udacity_sparkify/blob/master/sparkify-nb.ipynb "sparkify-nb.ipynb") - the actual notebook which was executed on a AWS EMR Cluster
  - [sparkify-nb.html](https://github.com/step4/udacity_sparkify/blob/master/sparkify-nb.html "sparkify-nb.html") - a html export to summerize the execution of the notebook
+ - [img - directory](https://github.com/step4/udacity_sparkify/tree/master/img) this directory contains all images used in the blogpost on medium and in this readme 
 
 ___
 ## How to run
@@ -49,7 +50,26 @@ All other steps like reading, cleaning, EDA, feature engineering, modelling etc.
 Out of the 12GB of event data the training data contains 22278 rows for each userId and 16 columns for each feature.
 The trained models are binary classifiers for churn or not churn.
 
-Without parameter tuning Logistic Regression, Random Forest and Gradient Boosted Trees were trained. The GBT classifier had the best accuracy of 0.866 and f1-score of 0.860. So only GBT was used for a CrossValidation.
+Without parameter tuning Logistic Regression, Random Forest and Gradient Boosted Trees were trained. The GBT classifier had the best accuracy of 0.866 and f1-score of 0.860. So only GBT was used for a Cross Validation.
 
-After parameter tuning the GBT model only got an accuracy of 0.86 and a f1-score of 0.858.
-So the model could not be further improved.
+After parameter tuning the GBT model got an accuracy of 0.868 and a f1-score of 0.858.
+The model improved a tiny bit in regard to the accuracy but lost a bit in the f1-score.
+
+The confusion matrix is:
+![Confusion Matrix Tuned GBT Model](https://github.com/step4/udacity_sparkify/blob/master/img/gbt_cv_conf.PNG?raw=true)
+
+Nevertheless it was possible to predict around 310 true possitives in the validation set.
+
+___
+## Possible Improvements
+
+One improvement could be the extension of the hardware limitations of the EMR cluster. With more powerfull nodes it is possible to train the GBT classifier with a much broader parameter grid to find a better hyperparamter set for this problem.
+
+Moreover one could look into more different features extracted from the event data. For example a more detailed exploration of the location data could give good indicators for churn.
+
+___
+## Conclusion
+
+It was a very interesting digging into the field of Big Data. The date set contained only event data of users interacting with the platform. Exploring and analysing this data to conclude on features which hopefully seem to be useful was a motivational and informative task.
+
+In addition the usage of a cloud based cluster solution like AWS EMR reduced the fear of contact which these services. So I will probably use them much more often for other projects.
