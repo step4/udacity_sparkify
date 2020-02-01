@@ -56,7 +56,7 @@ After parameter tuning the GBT model got an accuracy of 0.868 and a f1-score of 
 The model improved a tiny bit in regard to the accuracy but lost a bit in the f1-score.
 
 The confusion matrix is:
-![Confusion Matrix Tuned GBT Model](https://github.com/step4/udacity_sparkify/blob/master/img/gbt_cv_conf.PNG?raw=true)
+![Confusion Matrix Tuned GBT Model](https://github.com/step4/udacity_sparkify/blob/master/img/gbt_cv_conf.png?raw=true)
 
 Nevertheless it was possible to predict around 310 true possitives in the validation set.
 
